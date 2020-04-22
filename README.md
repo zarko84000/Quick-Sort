@@ -11,12 +11,17 @@ nécessairement triées. Puisque T[m]
 Pour les trier on réitère récursivement ce qui a été fait sur T sur chacun de ces sous-tableaux.
 L’algorithme est alors le suivant :
 
-Algorithme : TriRapide_recu(T,a,b);
-  si a < b alors;
-    m=Partitionnement(T,a,b);
-    TriRapide_recu(T,a,m-1);
-    TriRapide_recu(T,m+1,b);
-fin;
+Algorithme : TriRapide_recu(T,a,b)
+
+  si a < b alors
+  
+    m=Partitionnement(T,a,b)
+    
+    TriRapide_recu(T,a,m-1)
+    
+    TriRapide_recu(T,m+1,b)
+    
+fin
 
 Un algorithme de partitionnement possible est le suivant : Soit T un tableau d’entiers et soient a et b
 les deux indices entre lesquels nous souhaitons réaliser le partitionnement. On choisi comme pivot
